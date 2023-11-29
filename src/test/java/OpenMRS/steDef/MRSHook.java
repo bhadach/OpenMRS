@@ -1,4 +1,4 @@
-package OpenMRS.LoginSteDef;
+package OpenMRS.steDef;
 
 import Utils.ConfigReader;
 import Utils.DriverHelper;

@@ -1,12 +1,10 @@
-package OpenMRS.LoginSteDef;
+package OpenMRS.steDef;
 
-import OpenMRS.LoginPages.loginPage;
+import OpenMRS.pages.loginPage;
 import Utils.ConfigReader;
 import Utils.DriverHelper;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-
-import javax.swing.text.Utilities;
 
 public class LoginHappyAndNegativePath {
     WebDriver driver= DriverHelper.getDriver();

@@ -1,4 +1,4 @@
-package OpenMRS.LoginPages;
+package OpenMRS.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
