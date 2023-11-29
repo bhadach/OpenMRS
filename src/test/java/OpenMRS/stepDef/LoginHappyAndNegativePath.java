@@ -1,4 +1,4 @@
-package OpenMRS.steDef;
+package OpenMRS.stepDef;
 
 import OpenMRS.pages.loginPage;
 import Utils.ConfigReader;

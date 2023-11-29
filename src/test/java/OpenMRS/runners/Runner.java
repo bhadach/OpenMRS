@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features ="/Users/tentchotenev/Desktop/codefish/codefishProjectInternship/src/test/resources/features",
-        glue = "OpenMRS/steDef",
+        glue = "OpenMRS/stepDef",
         //dryRun = true,
 //        tags = "@regression",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt"}

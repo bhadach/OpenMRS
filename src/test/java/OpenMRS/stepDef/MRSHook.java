@@ -1,4 +1,4 @@
-package OpenMRS.steDef;
+package OpenMRS.stepDef;
 
 import Utils.ConfigReader;
 import Utils.DriverHelper;
