@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.time.Duration;
 
 public class DriverHelper {
-    private static WebDriver driver;
+    public static WebDriver driver;
     private DriverHelper(){};
     //u can not create an object from this class, which means you can not do any manipulations data in here
     public static WebDriver getDriver(){

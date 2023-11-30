@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features ="/Users/tentchotenev/Desktop/codefish/codefishProjectInternship/src/test/resources/features",
+        features ="C:\\Users\\esono\\IdeaProjects\\OpenMRS2\\src\\test\\resources\\features",
         glue = "OpenMRS/stepDef",
-        //dryRun = true,
+        dryRun = false,
 //        tags = "@regression",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt"}
 )

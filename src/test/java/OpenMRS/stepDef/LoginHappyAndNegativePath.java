@@ -1,6 +1,6 @@
 package OpenMRS.stepDef;
 
-import OpenMRS.pages.loginPage;
+import OpenMRS.pages.LoginPage;
 import Utils.ConfigReader;
 import Utils.DriverHelper;
 import io.cucumber.java.en.*;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginHappyAndNegativePath {
     WebDriver driver= DriverHelper.getDriver();
-    loginPage loginPage=new loginPage(driver);
+    LoginPage loginPage=new LoginPage(driver);
     @When("user provide wrung username {string} and password {string} and select Location {string} and click login button and Validate the Alert {string}")
     public void user_provide_wrung_username_and_password_and_select_location_and_click_login_button_and_validate_the_alert
             (String username ,String password,String location,String alert) throws InterruptedException {
@@ -36,4 +36,8 @@ public class LoginHappyAndNegativePath {
 
 
 
+    @Given("user login with username and password and select Location {string} and click login button Then validate the home page is visible {string}")
+    public void user_login_with_username_and_password_and_select_location_and_click_login_button_then_validate_the_home_page_is_visible(String location, String title) throws InterruptedException {
+        loginPage.Login(driver, ConfigReader.ReadProperty("username"),ConfigReader.ReadProperty("password"),location,title);
+    }
 }
