@@ -1,5 +1,7 @@
 package OpenMRS.pages;
 
+import Utils.ConfigReader;
+import Utils.DriverHelper;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,8 +10,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class loginPage {
-    public loginPage(WebDriver driver){
+import static Utils.DriverHelper.driver;
+
+public class LoginPage {
+    public LoginPage(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
 
@@ -75,6 +79,14 @@ public void LoginHappyPath(WebDriver driver,String username,String password, Str
 
 
 
+    public void Login(WebDriver driver, String username, String password, String location, String title) throws InterruptedException {
+        this.usernameBox.sendKeys(username);
+        this.password.sendKeys(password);
+        Thread.sleep(2000);
+        locations.get(0).click();
+        loginButton.click();
+        Assert.assertEquals(title,driver.getTitle().trim());
 
 
+    }
 }
