@@ -15,6 +15,8 @@ public class HomePage {
 
     @FindBy(xpath = "//div[@id='apps']//a")
     public List<WebElement> applications;
+    @FindBy(partialLinkText = "Find Patient")
+    WebElement findPatientRecord;
 
 
     public void clickApplication(String expectedName){
@@ -24,6 +26,9 @@ public class HomePage {
                 break;
             }
         }
+    }
+    public void findPatient(){
+        findPatientRecord.click();
     }
 }
 
